@@ -117,7 +117,7 @@ const btn = document.getElementById("btn");
 function check(){
     console.log("Cos tam klika");
 }
-//btn.addEventListener("click",check);
+btn.addEventListener("click",check);
 
 
 
@@ -126,31 +126,91 @@ function check(){
 
     const login = document.getElementById("login");
     const password = document.getElementById("password");
+    
     btn.addEventListener("click",function(){
         const loginValue=login.value;
         const passwordValue=password.value;
+        if(loginValue.trim().length === 0 || passwordValue.trim().length === 0){
+          let myContainer = document.getElementsByClassName("container");
+            const popUp1 = 'popUpDiv';
+            const isExisting = document.getElementById(popUp1);
+            if(isExisting)
+            {
+              return;
+            }
+            //window.alert("Nieprawidłowy login lub hasło!");
+            const newDiv1 = document.createElement("div");
+            newDiv1.setAttribute("id","popUpDiv1");
+            newDiv1.style.width="400px";
+            newDiv1.style.height="100px";
+            newDiv1.style.zIndex="999";
+            newDiv1.style.backgroundColor="lightgrey";
+            newDiv1.textContent="Wprowadź dane!";
+            newDiv1.style.textAlign="center";
+            newDiv1.style.display="flex";
+            newDiv1.style.justifyContent="center";
+            newDiv1.style.justifyItems="center";
+            newDiv1.style.alignItems="center";
+            newDiv1.style.borderRadius="10px";
+            newDiv1.style.boxShadow="2px 2px 5px 2px rgba(0, 0, 0, 0.3)";
+            newDiv1.style.left="50%";
+            newDiv1.style.transform="translateY(-50%)";
+            newDiv1.style.top="35%";
+            newDiv1.style.transform="translateX(-50%)";
+            newDiv1.style.position="fixed";
+            newDiv1.style.opacity=".9";
+            myContainer[0].appendChild(newDiv1);
+            setTimeout(function() {
+              newDiv1.remove();
+            }, 1500);
+            return;
+        }
+        
         
         if(loginValue!==l || p!==passwordValue){
-            window.alert("Nieprawidłowy login lub hasło!");
+            let myContainer = document.getElementsByClassName("container");
+            const popUp = 'popUpDiv';
+            const isExisting = document.getElementById(popUp);
+            if(isExisting)
+            {
+              return;
+            }
+            //window.alert("Nieprawidłowy login lub hasło!");
+            const newDiv = document.createElement("div");
+            newDiv.setAttribute("id","popUpDiv");
+            newDiv.style.width="400px";
+            newDiv.style.height="100px";
+            newDiv.style.zIndex="999";
+            newDiv.style.backgroundColor="lightgrey";
+            newDiv.textContent="Nieprawidłowy login lub hasło!";
+            newDiv.style.textAlign="center";
+            newDiv.style.display="flex";
+            newDiv.style.justifyContent="center";
+            newDiv.style.justifyItems="center";
+            newDiv.style.alignItems="center";
+            newDiv.style.borderRadius="10px";
+            newDiv.style.boxShadow="2px 2px 5px 2px rgba(0, 0, 0, 0.3)";
+            newDiv.style.left="50%";
+            newDiv.style.transform="translateY(-50%)";
+            newDiv.style.top="35%";
+            newDiv.style.transform="translateX(-50%)";
+            newDiv.style.position="fixed";
+            newDiv.style.opacity=".9";
+            myContainer[0].appendChild(newDiv);
+            setTimeout(function() {
+              newDiv.remove();
+            }, 3000);
             return;
         }
-        if(loginValue!=l && p===passwordValue){
-             window.alert("Nieprawidłowy login.");
-            return;
-        }
-        if(loginValue===l && p!==passwordValue){
-             window.alert("Nieprawidłowe hasło");
-            return;
-         }
-        if(loginValue==l && p==passwordValue){
-            window.alert("Pomyślnie zalogowano!");
-             location.href="./PROJEKTY/OverThinker/index.html";
         
+        if(loginValue==l && p==passwordValue){
+             window.alert("Pomyślnie zalogowano!");
+             location.href="./PROJEKTY/OverThinker/index.html";
+
             return;
         }
+
+           
     });
 
 
-
-  
- 
