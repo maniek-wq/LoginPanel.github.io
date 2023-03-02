@@ -1,0 +1,70 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    border:solid red 0.5px'
+}
+
+.container{
+    z-index: 999;
+    width:300px;
+    height:400px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(105, 13, 68, 1);
+background-image: linear-gradient(0deg, rgba(105, 13, 68, 1) 32%, rgba(41, 53, 86, 1) 100%);
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+    position: fixed;
+    left:50%;
+    transform: translateX(-50%); 
+    top:25%;
+    text-align: center;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 24px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 24px 0px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 24px 0px rgba(255, 255, 255, 1);
+    border:solid white 1.5px;
+    
+}
+h1{
+    color:white;
+}
+input:focus {
+    outline: none;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+.inputs{
+    display:flex;
+    flex-direction: column;
+    color:white;
+}
+input{
+    border-radius: 15px;
+    border:none;
+}
+html, body {
+    margin: 0;
+  }
+  
+  #particle-canvas {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(10, 10, 50) 0%,rgb(60, 10, 60) 100%);
+    vertical-align: middle;
+  }
+
+  button{
+    border-radius: 15px;
+    border:none;
+  
+    
+  }
+  button:hover{
+    background-color: antiquewhite;
+    padding:5px 5px 5px 5px;
+
+  }
