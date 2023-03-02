@@ -117,7 +117,7 @@ const btn = document.getElementById("btn");
 function check(){
     console.log("Cos tam klika");
 }
-btn.addEventListener("click",check);
+//btn.addEventListener("click",check);
 
 
 
@@ -129,22 +129,22 @@ btn.addEventListener("click",check);
     btn.addEventListener("click",function(){
         const loginValue=login.value;
         const passwordValue=password.value;
-        // console.log(loginValue);
+        
         if(loginValue!==l || p!==passwordValue){
-            // window.alert("Nieprawidłowy login lub hasło!");
+            window.alert("Nieprawidłowy login lub hasło!");
             return;
         }
         if(loginValue!=l && p===passwordValue){
-            // window.alert("Nieprawidłowy login.");
+             window.alert("Nieprawidłowy login.");
             return;
         }
         if(loginValue===l && p!==passwordValue){
-            // window.alert("Nieprawidłowe hasło");
+             window.alert("Nieprawidłowe hasło");
             return;
          }
         if(loginValue==l && p==passwordValue){
-            // window.alert("Pomyślnie zalogowano!");
-            // location.href="./PROJEKTY/OverThinker/index.html";
+            window.alert("Pomyślnie zalogowano!");
+             location.href="./PROJEKTY/OverThinker/index.html";
         
             return;
         }
@@ -152,18 +152,5 @@ btn.addEventListener("click",check);
 
 
 
-    // const password = document.getElementById("password").value;
-    // btn.addEventListener("click", function() {
-    //     if(login!==l || p!==password){
-    //         window.alert("Nieprawidłowy login lub hasło!");
-    //     }
-    //     if(login!=l && p===password){
-    //         window.alert("Nieprawidłowy login.");
-    //     }
-    //     if(login===l && p!==password){
-    //         window.alert("Nieprawidłowe hasło");
-    //     }
-    //     if(login==l && p==password){
-    //         window.alert("Pomyślnie zalogowano!");
-    //     }
-    // });
+  
+ 
